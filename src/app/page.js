@@ -1,15 +1,23 @@
-import Link from "next/link";
+import React from 'react'
+import HeroSection from '../components/HeroSection'
+import "../components/Hero.css";
+import ProductYouLike from '../components/ProductYouLike';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-4 justify-center items-center mt-10">
-      <h1 className="text-3xl">
-        This is the home page 
-      </h1>
+    <div>
+      {/* <Header /> */} 
 
-      <Link href="/register" className="rounded-full p-2 bg-slate-500 text-white font-bold ">
-          Register
-        </Link>
+      <h1>Set Header with next links remove everything related to react routing use Next Routes</h1>
+
+      <HeroSection />
+      <div className='hero hidden sm:w-full sm:h-screen sm:block '>
+
+      </div>
+      <ProductYouLike />
+      <Footer />
     </div>
-  );
+  )
 }
