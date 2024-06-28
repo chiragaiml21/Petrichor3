@@ -22,7 +22,6 @@ const userSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: [true, "Address is required"],
   },
   verifyCode: {
     type: String,
@@ -34,4 +33,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-export const User = mongoose.model("User", userSchema);
+const UserModel = (mongoose.models.User) || mongoose.model("User", userSchema);
+
+export default UserModel;
