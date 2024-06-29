@@ -77,7 +77,15 @@ function LoginPage() {
             <button type="submit" className="text-white bg-[#b29a76] hover:bg-[#b29a76]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center justify-between mb-2">
               Login
             </button>
+<<<<<<< HEAD
 
+=======
+            <button type="button" // Changed to type="button" to prevent form submission
+             onClick={() => signIn('google')}
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Login with Google
+            </button>
+>>>>>>> 0f06d352cea7f8c9c5fe0336cf617a5670c2e34c
           </div>
           <Link href={"/register"}><p className='text-center my-4 text-[#744f16] hover:text-[#b29a76]/90'>~Create account~</p></Link>
         </form>

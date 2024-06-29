@@ -50,7 +50,7 @@ const Header = () => {
           <div className="navbar">
             <ul className="flex justify-between">
               <li className="px-2 hover:scale-110 hover:cursor-pointer">
-                <Search strokeWidth={1} />
+                <Link href={"/search"}><Search strokeWidth={1} /></Link>
               </li>
               <li className="hidden px-2 hover:scale-110 sm:block">
                 <Link href={"/login"}>
