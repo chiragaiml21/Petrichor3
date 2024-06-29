@@ -33,13 +33,13 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
-            <img src="" alt="PETRICHOR" className="" />
+            <Link href={"/"}><img src="" alt="PETRICHOR" className="" /></Link>
           </div>
 
           <div className="navbar flex w-full">
             <ul className="sm:flex justify-between px-4 hidden">
               <li className="px-2 hover:underline hover:decoration-solid">
-                <Link href={"/"}>Home</Link>
+                <Link href={"/products"}>Products</Link>
               </li>
               <li className="px-2 hover:underline hover:decoration-solid">
                 <Link href={"/about"}>About</Link>
