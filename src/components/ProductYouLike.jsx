@@ -34,10 +34,8 @@ const ProductYouLike = () => {
       price: '$35',
       imageSrc: 'https://th.bing.com/th/id/OIG2.wX.fdw92GW9AapUUpd5t?w=1024&h=1024&rs=1&pid=ImgDetMain',
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-    },
-
+    }
   ]
-
 
   return (
     <div className="w-full flex justify-center sm:p-20 py-60 p-12">

@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 function LoginPage() {
     const [loading, setLoading] = useState(false);
+    const {data: session} = useSession();
     const router = useRouter();
     const email = useRef("");
     const password = useRef("");
@@ -26,7 +27,11 @@ function LoginPage() {
       if (result?.ok) {
         setTimeout(() => {
           setLoading(false);
-          router.push("/");
+          if(session.user.isAdmin){
+            router.push("/admin");
+          } else {
+            router.push("/profile");
+          }
         }, 1000);
       } else {
         console.error("Sign-in failed");
