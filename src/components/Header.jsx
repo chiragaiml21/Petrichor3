@@ -26,18 +26,18 @@ const Header = () => {
             {menuOpen ? (
               <X
                 strokeWidth={1}
-                className="z-50 text-xl sm:hidden bg-white"
+                className="z-[100] text-xl sm:hidden bg-white absolute left-0 top-7"
                 onClick={toggleMenu}
               />
             ) : (
               <Menu
                 strokeWidth={1}
-                className="z-50 text-xl sm:hidden"
+                className="z-50 text-xl sm:hidden absolute left-0 top-7"
                 onClick={toggleMenu}
               />
             )}
-            <Link href={"/"}>
-              <img src="" alt="PETRICHOR" className="" />
+            <Link href={"/"} className="w-40">
+              <img src="/Final_Logo.png" alt="PETRICHOR" className="mt-1 ml-8 sm:ml-0" />
             </Link>
           </div>
 
