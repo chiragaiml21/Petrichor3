@@ -62,22 +62,22 @@ const Header = () => {
               <li className="hidden px-2 hover:scale-110 sm:block">
                 {session ? (
                   isAdmin ? (
-                    <Link href="/admin">
+                    <Link href={"/admin"}>
                       <User strokeWidth={1} />
                     </Link>
                   ) : (
-                    <Link href="/profile">
+                    <Link href={"/profile"}>
                       <User strokeWidth={1} />
                     </Link>
                   )
                 ) : (
-                  <Link href="/login">
+                  <Link href={"/login"}>
                     <User strokeWidth={1} />
                   </Link>
                 )}
               </li>
               <li className="px-2 hover:scale-110">
-                <Link href="/cart">
+                <Link href={"/cart"}>
                   <ShoppingCart strokeWidth={1} />
                 </Link>
               </li>
