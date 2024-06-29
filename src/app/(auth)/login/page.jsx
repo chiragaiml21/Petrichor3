@@ -69,7 +69,7 @@ function LoginPage() {
               Login
             </button>
             <button type="button" // Changed to type="button" to prevent form submission
-              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/" })}
+             onClick={() => signIn('google')}
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Login with Google
             </button>
