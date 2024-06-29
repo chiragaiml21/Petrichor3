@@ -21,10 +21,10 @@ export function SearchBar() {
   };
 
   return (
-    <div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-black">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
-        Search for something
-      </h2>
+    <div className="py-24 flex flex-col justify-center items-center px-4">
+      <h1 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
+        Search for Product
+      </h1>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}

@@ -70,19 +70,24 @@ const Header = () => {
           <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center z-50">
             <ul className="flex flex-col items-center">
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link href="/" onClick={toggleMenu}>
+                <Link href={"/"} onClick={toggleMenu}>
                   Home
                 </Link>
               </li>
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link href="/about" onClick={toggleMenu}>
+                <Link href={"/products"} onClick={toggleMenu}>
+                  Products
+                </Link>
+              </li>
+              <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
+                <Link href={"/about"} onClick={toggleMenu}>
                   About
                 </Link>
               </li>
             </ul>
             <ul className="flex flex-col items-center">
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link href="/login" onClick={toggleMenu}>
+                <Link href={"/login"} onClick={toggleMenu}>
                   <User strokeWidth={1} />
                 </Link>
               </li>

@@ -67,7 +67,7 @@ function LoginPage() {
           </div>
           <div className="flex items-center justify-between py-4">
               <button 
-              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/" })}
+              onClick={() => signIn('google')}
               type="button" 
               className="text-white w-1/2  bg-[#b29a76] hover:bg-[#b29a76]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-sm px-8 sm:px-5 py-2.5 text-center inline-flex items-center justify-between mb-2"><svg className="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
               <div className="sm:block hidden">Sign in with Google</div>
@@ -77,15 +77,7 @@ function LoginPage() {
             <button type="submit" className="text-white bg-[#b29a76] hover:bg-[#b29a76]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center justify-between mb-2">
               Login
             </button>
-<<<<<<< HEAD
-
-=======
-            <button type="button" // Changed to type="button" to prevent form submission
-             onClick={() => signIn('google')}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Login with Google
-            </button>
->>>>>>> 0f06d352cea7f8c9c5fe0336cf617a5670c2e34c
+            
           </div>
           <Link href={"/register"}><p className='text-center my-4 text-[#744f16] hover:text-[#b29a76]/90'>~Create account~</p></Link>
         </form>
