@@ -10,30 +10,20 @@ const page = () => {
     // Update Products
 
     <>
-    <div className="flex flex-col items-center justify-center h-screen gap-y-10">
-        <h1 className="text-4xl font-bold">Admin Page</h1>
-        <div className="flex flex-col items-center justify-center gap-y-5">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/admin/orders">View Orders</a>
-            </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/admin/upload">Upload Products</a>
-            </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/admin/update">Update Products</a>
-            </button>
-        </div>
-
-        
-      {session && (
-        <div>
-          <button onClick={signOut}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >Logout</button>
-        </div>
-      )}
-
-    </div>
+    <div className="min-h-screen bg-gray-100 p-8">
+  <h1 className="text-4xl font-bold text-gray-800 mb-10">Admin Page</h1>
+  <div className="flex flex-col items-center justify-center space-y-4">
+    <a href={"/orders"} className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out">
+      View Orders
+    </a>
+    <a href={"upload-product"} className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out">
+      Upload Products
+    </a>
+    <a href="/admin/update" className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out">
+      Update Products
+    </a>
+  </div>
+</div>
     </>
   )
 }

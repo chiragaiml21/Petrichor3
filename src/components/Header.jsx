@@ -26,18 +26,18 @@ const Header = () => {
             {menuOpen ? (
               <X
                 strokeWidth={1}
-                className="z-50 text-xl sm:hidden bg-white"
+                className="z-[100] text-xl sm:hidden bg-white absolute left-0 top-7"
                 onClick={toggleMenu}
               />
             ) : (
               <Menu
                 strokeWidth={1}
-                className="z-50 text-xl sm:hidden"
+                className="z-50 text-xl sm:hidden absolute left-0 top-7"
                 onClick={toggleMenu}
               />
             )}
-            <Link href={"/"}>
-              <img src="" alt="PETRICHOR" className="" />
+            <Link href={"/"} className="w-40">
+              <img src="/Final_Logo.png" alt="PETRICHOR" className="mt-1 ml-8 sm:ml-0" />
             </Link>
           </div>
 
@@ -62,22 +62,22 @@ const Header = () => {
               <li className="hidden px-2 hover:scale-110 sm:block">
                 {session ? (
                   isAdmin ? (
-                    <Link href="/admin">
+                    <Link href={"/admin"}>
                       <User strokeWidth={1} />
                     </Link>
                   ) : (
-                    <Link href="/profile">
+                    <Link href={"/profile"}>
                       <User strokeWidth={1} />
                     </Link>
                   )
                 ) : (
-                  <Link href="/login">
+                  <Link href={"/login"}>
                     <User strokeWidth={1} />
                   </Link>
                 )}
               </li>
               <li className="px-2 hover:scale-110">
-                <Link href="/cart">
+                <Link href={"/cart"}>
                   <ShoppingCart strokeWidth={1} />
                 </Link>
               </li>
