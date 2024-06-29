@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function LoginPage() {
     const [loading, setLoading] = useState(false);
@@ -36,13 +37,13 @@ function LoginPage() {
     };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-full max-w-xs">
-        <h2 className="text-center text-2xl font-bold mb-6">Login</h2>
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="flex justify-center items-center">
+      <div className="sm:w-2/3 lg:w-4/12 py-28">
+        <h1 className="text-center text-4xl font-bold mb-6">Login</h1>
+        <form onSubmit={handleSubmit} className="px-8 py-10 w-full">
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
             <input
+            className='w-full border p-4'
               ref={email} // Changed to use ref
               id="email"
               placeholder="example@example.com"
@@ -53,8 +54,8 @@ function LoginPage() {
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">Password:</label>
             <input
+            className='w-full border p-4'
               ref={password} // Changed to use ref
               id="password"
               placeholder="••••••••"
@@ -64,16 +65,21 @@ function LoginPage() {
               }}
             />
           </div>
-          <div className="flex items-center justify-between">
-            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <div className="flex items-center justify-between py-4">
+              <button 
+              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/" })}
+              type="button" 
+              className="text-white w-1/2  bg-[#b29a76] hover:bg-[#b29a76]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-sm px-8 sm:px-5 py-2.5 text-center inline-flex items-center justify-between mb-2"><svg className="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
+              <div className="sm:block hidden">Sign in with Google</div>
+              <div className='sm:hidden'>Google</div>
+              </button>
+
+            <button type="submit" className="text-white bg-[#b29a76] hover:bg-[#b29a76]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center justify-between mb-2">
               Login
             </button>
-            <button type="button" // Changed to type="button" to prevent form submission
-              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/" })}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Login with Google
-            </button>
+
           </div>
+          <Link href={"/register"}><p className='text-center my-4 text-[#744f16] hover:text-[#b29a76]/90'>~Create account~</p></Link>
         </form>
       </div>
     </div>
