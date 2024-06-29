@@ -1,5 +1,5 @@
 "use client";
-// import { Outlet, Link } from "react-router-dom";
+
 import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import TopBanner from "./TopBanner";
 import { useState } from "react";
@@ -39,10 +39,10 @@ const Header = () => {
           <div className="navbar flex w-full">
             <ul className="sm:flex justify-between px-4 hidden">
               <li className="px-2 hover:underline hover:decoration-solid">
-                <Link to="/">Home</Link>
+                <Link href={"/"}>Home</Link>
               </li>
               <li className="px-2 hover:underline hover:decoration-solid">
-                <Link to="/about">About</Link>
+                <Link href={"/about"}>About</Link>
               </li>
             </ul>
           </div>
@@ -53,12 +53,12 @@ const Header = () => {
                 <Search strokeWidth={1} />
               </li>
               <li className="hidden px-2 hover:scale-110 sm:block">
-                <Link to="/login">
+                <Link href={"/login"}>
                   <User strokeWidth={1} />
                 </Link>
               </li>
               <li className="px-2 hover:scale-110">
-                <Link to="cart">
+                <Link href="/cart">
                   <ShoppingCart strokeWidth={1} />
                 </Link>
               </li>
@@ -70,27 +70,26 @@ const Header = () => {
           <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center z-50">
             <ul className="flex flex-col items-center">
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link to="/" onClick={toggleMenu}>
+                <Link href="/" onClick={toggleMenu}>
                   Home
                 </Link>
               </li>
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link to="/about" onClick={toggleMenu}>
+                <Link href="/about" onClick={toggleMenu}>
                   About
                 </Link>
               </li>
             </ul>
             <ul className="flex flex-col items-center">
               <li className="px-2 py-4 text-xl hover:underline hover:decoration-solid">
-                <Link to="/login" onClick={toggleMenu}>
+                <Link href="/login" onClick={toggleMenu}>
                   <User strokeWidth={1} />
                 </Link>
               </li>
             </ul>
           </div>
         )}
-      </div>
-      <Outlet />
+      </div>  
     </>
   );
 };
