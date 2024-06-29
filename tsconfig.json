@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/api/auth/[...nextauth]/option.js", "src/app/api/auth/register/route.js", "src/components/ui/placeholders-and-vanish-input.jsx"  ],
+, "src/app/api/auth/[...nextauth]/option.js", "src/app/api/auth/register/route.js", "src/components/ui/placeholders-and-vanish-input.jsx", "src/context/AuthProvider.jsx"  ],
   "exclude": [
     "node_modules"
   ]

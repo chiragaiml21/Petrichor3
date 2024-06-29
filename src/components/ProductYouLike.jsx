@@ -3,8 +3,6 @@ import "./Hero.css";
 
 const ProductYouLike = () => {
   const products = [
-
-
     {
       id: 1,
       name: 'Earthen Bottle',

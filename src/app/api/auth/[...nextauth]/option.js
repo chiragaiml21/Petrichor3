@@ -42,6 +42,9 @@ export const authOptions = {
         token.id = user.id;
         token.email = user.email;
         token.name = user.name;
+        if (user.email === process.env.ADMIN_EMAIL) {
+          token.isAdmin = true;
+        }
       }
       return token;
     },
@@ -50,6 +53,7 @@ export const authOptions = {
         session.user._id = token._id;
         session.user.email = token.email;
         session.user.name = token.name;
+        session.user.isAdmin = token.isAdmin;
       }
       return session;
     },

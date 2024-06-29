@@ -4,10 +4,13 @@ import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import TopBanner from "./TopBanner";
 import { useState } from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 // import LOGO from "../assets/LOGO.png"
 // import LOGO2 from "../assets/LOGO2.png"
 
 const Header = () => {
+  const { data: session } = useSession();
+  const isAdmin = session?.user.isAdmin;
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -33,7 +36,9 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
-            <Link href={"/"}><img src="" alt="PETRICHOR" className="" /></Link>
+            <Link href={"/"}>
+              <img src="" alt="PETRICHOR" className="" />
+            </Link>
           </div>
 
           <div className="navbar flex w-full">
@@ -50,12 +55,26 @@ const Header = () => {
           <div className="navbar">
             <ul className="flex justify-between">
               <li className="px-2 hover:scale-110 hover:cursor-pointer">
-                <Link href={"/search"}><Search strokeWidth={1} /></Link>
+                <Link href={"/search"}>
+                  <Search strokeWidth={1} />
+                </Link>
               </li>
               <li className="hidden px-2 hover:scale-110 sm:block">
-                <Link href={"/login"}>
-                  <User strokeWidth={1} />
-                </Link>
+                {session ? (
+                  isAdmin ? (
+                    <Link href="/admin">
+                      <User strokeWidth={1} />
+                    </Link>
+                  ) : (
+                    <Link href="/profile">
+                      <User strokeWidth={1} />
+                    </Link>
+                  )
+                ) : (
+                  <Link href="/login">
+                    <User strokeWidth={1} />
+                  </Link>
+                )}
               </li>
               <li className="px-2 hover:scale-110">
                 <Link href="/cart">
@@ -89,7 +108,7 @@ const Header = () => {
             </ul>
           </div>
         )}
-      </div>  
+      </div>
     </>
   );
 };
