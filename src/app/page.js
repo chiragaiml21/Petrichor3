@@ -1,16 +1,17 @@
-import React from 'react'
-import HeroSection from '../components/HeroSection'
+"use client";
+
+import React, { useState } from "react";
+import HeroSection from "../components/HeroSection";
 import "../components/Hero.css";
-import ProductYouLike from '../components/ProductYouLike';
+import Products from "../components/Products";
+import { ProductItems } from "../data/data";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-      <div className='hero hidden sm:w-full sm:h-screen sm:block '>
-
-      </div>
-      <ProductYouLike />
+      <div className="hero hidden sm:w-full sm:h-screen sm:block "></div>
+      <Products products={ProductItems.products} />
     </div>
-  )
+  );
 }
