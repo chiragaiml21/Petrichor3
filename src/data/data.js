@@ -1,105 +1,103 @@
 const categoryTags = {
-    electronics: ['new', 'sale', 'popular', 'limited'],
-    furniture: ['vintage', 'modern', 'classic'],
-    clothing: ['men', 'women', 'children'],
-    books: ['fiction', 'non-fiction', 'educational']
-  };
+  tableware: ['new', 'sale', 'popular', 'limited'],
+  cookware: ['traditional', 'modern', 'classic'],
+  drinkware: ['men', 'women', 'children'],
+  decor: ['indoor', 'outdoor', 'seasonal']
+};
 
-  const ProductItems = {
-    "products": [
-      {
-        "name": "4K Smart TV",
-        "price": "499.99",
-        "image": "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "date": "2021-10-01",
-        "description": "A 55-inch 4K smart TV with vibrant colors and smart features.",
-        "category": "electronics",
-        "tags": ["new", "popular", "electronics"]
-      },
-      {
-        "name": "Retro Sofa",
-        "price": "899.99",
-        "image": "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg",
-        "date": "2021-09-15",
-        "description": "A comfortable retro sofa that adds a vintage touch to your living room.",
-        "category": "furniture",
-        "tags": ["vintage", "classic","furniture"]
-      },
-      {
-        "name": "Men's Casual Jacket",
-        "price": "79.99",
-        "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg",
-        "date": "2021-09-05",
-        "description": "A stylish and comfortable jacket perfect for casual outings.",
-        "category": "clothing",
-        "tags": ["men", "new","clothing"]
-      },
-      {
-        "name": "Bestseller Fiction Book",
-        "price": "19.99",
-        "image": "https://images.pexels.com/photos/4468209/pexels-photo-4468209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "date": "2021-08-20",
-        "description": "An engaging fiction novel that is currently a bestseller.",
-        "category": "books",
-        "tags": ["fiction", "popular","books"]
-      },
-      {
-        "name": "Noise Cancelling Headphones",
-        "price": "199.99",
-        "image": "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "date": "2021-08-10",
-        "description": "Premium noise cancelling headphones for an immersive audio experience.",
-        "category": "electronics",
-        "tags": ["new", "limited", "electronics"]
-      },
-      {
-        "name": "Modern Coffee Table",
-        "price": "149.99",
-        "image": "https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "date": "2021-07-25",
-        "description": "A sleek and modern coffee table that fits any contemporary living space.",
-        "category": "furniture",
-        "tags": ["modern", "furniture"]
-      },
-      {
-        "name": "Women's Summer Dress",
-        "price": "39.99",
-        "image": "https://images.pexels.com/photos/257849/pexels-photo-257849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "date": "2021-07-15",
-        "description": "A beautiful summer dress perfect for warm days.",
-        "category": "clothing",
-        "tags": ["women", "sale","clothing"]
-      },
-      {
-        "name": "Educational Children's Book",
-        "price": "12.99",
-        "image": "https://images.pexels.com/photos/6373289/pexels-photo-6373289.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "date": "2021-07-05",
-        "description": "A fun and informative book that helps children learn new concepts.",
-        "category": "books",
-        "tags": ["educational", "children","books"]
-      },
-      {
-        "name": "Limited Edition Smartphone",
-        "price": "999.99",
-        "image": "https://images.pexels.com/photos/7310203/pexels-photo-7310203.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "date": "2021-06-20",
-        "description": "A limited edition smartphone with exclusive features.",
-        "category": "electronics",
-        "tags": ["limited", "electronics"]
-      },
-      {
-        "name": "Classic Wooden Chair",
-        "price": "249.99",
-        "image": "https://images.pexels.com/photos/5998031/pexels-photo-5998031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "date": "2021-06-10",
-        "description": "A sturdy and elegant classic wooden chair for your home.",
-        "category": "furniture",
-        "tags": ["classic", "furniture"]
-      }
-    ]
-  }
-  
+const ProductItems = {
+  "products": [
+    {
+      "name": "Mud Dinner Plate Set",
+      "price": "29.99",
+      "image": "https://m.media-amazon.com/images/I/71gvy8luNdL.jpg",
+      "date": "2022-01-10",
+      "description": "A set of beautifully crafted mud dinner plates.",
+      "category": "tableware",
+      "tags": ["new", "popular", "tableware"]
+    },
+    {
+      "name": "Traditional Clay Pot",
+      "price": "24.99",
+      "image": "https://m.media-amazon.com/images/I/71btCnSENZL.jpg",
+      "date": "2022-02-15",
+      "description": "A traditional clay pot perfect for cooking.",
+      "category": "cookware",
+      "tags": ["traditional", "classic", "cookware"]
+    },
+    {
+      "name": "Clay Mug Set",
+      "price": "19.99",
+      "image": "https://ksionline.in/wp-content/uploads/2023/01/D2-MUG-SET-OF-4-1.jpg",
+      "date": "2022-03-05",
+      "description": "A set of rustic clay mugs for everyday use.",
+      "category": "drinkware",
+      "tags": ["new", "drinkware"]
+    },
+    {
+      "name": "Decorative Clay Vase",
+      "price": "34.99",
+      "image": "https://cdn.pixelspray.io/v2/black-bread-289bfa/TIw66q/wrkr/t.resize(h:1240,w:1400)/data/Westelm/29082022img/7558366_9.jpg",
+      "date": "2022-04-20",
+      "description": "A beautifully decorated clay vase for your home.",
+      "category": "decor",
+      "tags": ["indoor", "popular", "decor"]
+    },
+    {
+      "name": "Clay Cooking Pan",
+      "price": "39.99",
+      "image": "https://ezahk.com/cdn/shop/products/71eI6udxfHL._SL1500_ee589449-9157-4298-91f1-31a499bf977e.jpg?v=1660804790&width=14451",
+      "date": "2022-05-10",
+      "description": "A clay cooking pan ideal for traditional recipes.",
+      "category": "cookware",
+      "tags": ["new", "limited", "cookware"]
+    },
+    {
+      "name": "Modern Clay Serving Bowl",
+      "price": "24.99",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2023/12/365531843/SC/ZP/GO/91504303/product-jpeg.jpg",
+      "date": "2022-06-25",
+      "description": "A modern serving bowl made from high-quality clay.",
+      "category": "tableware",
+      "tags": ["modern", "tableware"]
+    },
+    {
+      "name": "Handcrafted Clay Pitcher",
+      "price": "29.99",
+      "image": "https://images-cdn.ubuy.co.in/660b988a4f591a3ade5e80ad-hakan-handmade-traditional-unglazed-clay.jpg",
+      "date": "2022-07-15",
+      "description": "A handcrafted clay pitcher for serving beverages.",
+      "category": "drinkware",
+      "tags": ["limited", "drinkware"]
+    },
+    {
+      "name": "Outdoor Clay Lantern",
+      "price": "44.99",
+      "image": "https://gachwala.in/wp-content/uploads/2023/03/lantern-3.jpg",
+      "date": "2022-08-05",
+      "description": "A charming clay lantern for outdoor decor.",
+      "category": "decor",
+      "tags": ["outdoor", "seasonal", "decor"]
+    },
+    {
+      "name": "Limited Edition Clay Tureen",
+      "price": "59.99",
+      "image": "https://ikiru.in/cdn/shop/files/buy-serving-bowl-ruchira-patram-by-trance-terra-on-ikiru-online-store-1_512x450.png?v=1715175774",
+      "date": "2022-09-20",
+      "description": "A limited edition clay tureen for special occasions.",
+      "category": "cookware",
+      "tags": ["limited", "cookware"]
+    },
+    {
+      "name": "Classic Clay Tea Set",
+      "price": "49.99",
+      "image": "https://newbasics.in/wp-content/uploads/2020/12/Tea-Pot_1.png",
+      "date": "2022-10-10",
+      "description": "A classic clay tea set for serving guests.",
+      "category": "drinkware",
+      "tags": ["classic", "drinkware"]
+    }
+  ]
+}
 
-
-export {categoryTags, ProductItems};
+export { categoryTags, ProductItems };

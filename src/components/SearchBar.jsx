@@ -8,10 +8,10 @@ export function SearchBar() {
   const route = useRouter();
   const [tags, setTags] = useState([]);
   const placeholders = [
-    'new, sale, popular, limited',
-    'vintage, modern, classic',
-    'fiction, non-fiction, educational',
-    'men, women, children',
+    'Search for tableware',
+    'Search for cookware',
+    'Search for drinkware',
+    'Search for decor',
   ];
 
   const handleChange = (e) => {

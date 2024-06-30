@@ -38,7 +38,7 @@ const ProductYouLike = () => {
       <div className="max-w-5xl mx-auto px-8">
         <div className="flex justify-between items-center mx-5 pt-10">
           <h1 className="text-3xl font-bold">
-            {searchTags.length ? "Search Results" : "News"}
+            {searchTags.length ? "Search Results" : "Our Products"}
           </h1>
           <div className="flex gap-2">
             <select
@@ -62,12 +62,12 @@ const ProductYouLike = () => {
               onChange={(e) => setCategoryFilter(e.target.value)}
               className="transition-all delay-50 items-center border border-gray-500 p-2 rounded-md text-black shadow-none hover:shadow-lg hover:shadow-[#ffffff2d]"
             >
-              <option value="">Filter</option>
-              {searchTags.length && <option value="all">All</option>}
-              <option value="electronics">Electronics</option>
-              <option value="furniture">Furniture</option>
-              <option value="clothing">Clothing</option>
-              <option value="books">Books</option>
+              <option value="">All Categories</option>
+              {/* {searchTags.length && <option value="all">All</option>} */}
+              <option value="tableware">Tableware</option>
+              <option value="cookware">Cookware</option>
+              <option value="drinkware">Drinkware</option>
+              <option value="decor">Decor</option>
             </select>
           </div>
 
