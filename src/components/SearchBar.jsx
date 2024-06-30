@@ -1,22 +1,27 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input";
 
 export function SearchBar() {
+  const route = useRouter();
+  const [tags, setTags] = useState([]);
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
+    'new, sale, popular, limited',
+    'vintage, modern, classic',
+    'fiction, non-fiction, educational',
+    'men, women, children',
   ];
 
   const handleChange = (e) => {
+    setTags(e.target.value.split(",").map(tag => tag.trim()));
     console.log(e.target.value);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    route.push(`/products?tags=${tags.join(",")}`);
     console.log("submitted");
   };
 
