@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import Link from "next/link";
 
 const page = () => {
-  const [user, setUser] = React.useState({
+  const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
