@@ -2,7 +2,7 @@
 import React from "react";
 import { signOut } from "next-auth/react";
 
-const page = () => {
+const Page = () => {
   const { data: session } = useSession();
   return (
     // View orders
@@ -45,4 +45,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

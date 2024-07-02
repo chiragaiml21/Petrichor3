@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -91,4 +91,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
